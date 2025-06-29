@@ -2,7 +2,7 @@
 import streamlit as st
 from transformers import pipeline
 
-def main()
+def main():
 # Load summarization model
 st.title("📰 Headline Generator")
 st.subheader("Generate headlines from article content")
