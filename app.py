@@ -1,0 +1,2 @@
+print("Headline Generator Project")
+
