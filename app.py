@@ -2,6 +2,13 @@
 import streamlit as st 
 from transformers import pipeline
 
+# ✅ Load model outside the function
+@st.cache_resource
+def load_model():
+    return pipeline("summarization")
+
+summarizer = load_model()
+
 def main():
     # Load summarization model
     st.title("📰 Headline Generator")
@@ -17,6 +24,5 @@ def main():
         st.write(result[0]['summary_text'])
         
         if __name__== "__main__":
-         main()
-
+             main()
 
